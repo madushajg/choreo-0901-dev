@@ -1,6 +1,7 @@
 # +required Version of the endpoint configuration YAML
 version: 0.1
 
+type: service
 # +required List of endpoints to create
 endpoints:
   # +required Unique name for the endpoint. (This name will be used when generating the managed API)
@@ -21,7 +22,9 @@ endpoints:
     # The path should be relative to the docker context.
     schemaFilePath: openapi.yaml
 connections:
-  - id: salesforce://salesforceCorporate	
+  - id: dynamoDb://dynamoDb	
+    kind: datastore
     mappings:
-      - instance.url: SALESFORCECOPERATE_INSTANCE_URL
-      - PAT: SALESFORCECOPERATE_PAT
+      - instance.url: DB_INSTANCE_URL
+      - user: DB_USER
+      - password: DB_PASSWORD

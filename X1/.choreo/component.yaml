@@ -22,7 +22,7 @@ endpoints:
     schemaFilePath: openapi.yaml
 connections:
   # - id: choreo://<Project>HR/<Service>EmployeeService/<Version>v1/<Endpoint>endpoint
-  - id: choreo://A/X1/v1/basepath1
+  - id: choreo://A/X2/v1/basepath1
     mappings:
       - service.url: X1_SVC_URL
       - consumer.secret: X1_SVC_CONSUMER_SECRET
